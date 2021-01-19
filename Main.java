@@ -33,11 +33,22 @@ public class Main
     });
     //-------label1-------//
     JLabel label1 = new JLabel("Count the ducks");
-    
+    JTextField textfield1 = new JTextField(10);
+
     panel1.add(button1);
     panel1.add(button2);
     panel1.add(label1);
+    panel1.add(textfield1);
 
-    frame1.getContentPane().add(panel1);
+
+    //--------Panel 2--------//
+    JPanel pnl2 = new JPanel(new BorderLayout(10, 10));
+    //--------Image 1--------//
+    ImageIcon duckImg = new ImageIcon("duck.jpg", "A little duckies");
+    JLabel duckLabelPic = new JLabel(duckImg);
+    pnl2.add(duckLabelPic);
+
+    frame1.getContentPane().add(BorderLayout.NORTH, panel1);
+    frame1.getContentPane().add(BorderLayout.CENTER, pnl2);
   }// end of main method
 }// end of class main
