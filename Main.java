@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.event.*;
+import java.awt.*;
 public class Main 
 {
   public static void main (String args[])
@@ -10,6 +11,7 @@ public class Main
     frame1.setSize(500,500);
     frame1.setVisible(true);
 
+  JPanel panel1 = new JPanel(new GridLayout(2, 2, 20, 20));
     //------Button1-------//
     JButton button1 = new JButton("Click Me!");
 
@@ -29,7 +31,9 @@ public class Main
         System.out.println("Thanks Pal!");
       }
     });
-    frame1.add(button1);
-    frame1.add(button2);
+    panel1.add(button1);
+    panel1.add(button2);
+
+    frame1.getContentPane().add(panel1);
   }// end of main method
 }// end of class main
