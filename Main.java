@@ -20,7 +20,16 @@ public class Main
         System.out.println("Yay! You clicked the button");
       }
     });
+    JButton button2 = new JButton("No, Click Me!");
+
+    button2.addActionListener(new ActionListener()
+    {
+      public void actionPerformed(ActionEvent e)
+      {
+        System.out.println("Thanks Pal!");
+      }
+    });
     frame1.add(button1);
-    frame1.setVisible(true);
+    frame1.add(button2);
   }// end of main method
 }// end of class main
