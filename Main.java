@@ -12,14 +12,22 @@ public class Main
     frame1.setVisible(true);
 
   JPanel panel1 = new JPanel(new GridLayout(2, 2, 20, 20));
+
+    //-------label1-------//
+    JLabel label1 = new JLabel("Count the ducks");
+    JTextField textfield1 = new JTextField(10);
+    
     //------Button1-------//
-    JButton button1 = new JButton("Click Me!");
+    JButton button1 = new JButton("Update Label!");
 
     button1.addActionListener(new ActionListener()
     {
       public void actionPerformed(ActionEvent e)
       {
-        System.out.println("Yay! You clicked the button");
+        String[] phrases = {"Counting Ducks", "You counted to", "Look at you Count.", "Nice one There", "Keep going"};
+        String newText = phrases[(int)(Math.random() * phrases.length)];
+        label1.setText(newText);
+        
       }
     });
     JButton button2 = new JButton("No, Click Me!");
@@ -31,9 +39,7 @@ public class Main
         System.out.println("Thanks Pal!");
       }
     });
-    //-------label1-------//
-    JLabel label1 = new JLabel("Count the ducks");
-    JTextField textfield1 = new JTextField(10);
+
 
     panel1.add(button1);
     panel1.add(button2);
